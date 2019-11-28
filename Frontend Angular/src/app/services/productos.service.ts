@@ -7,8 +7,8 @@ import { Producto } from '../models/Producto';
   providedIn: 'root'
 })
 export class ProductosService {
-  // API_URI = 'http://127.0.0.1:8000';
-  API_URI = 'https://fdcb5563.ngrok.io';
+  API_URI = 'http://127.0.0.1:8000';
+  // API_URI = 'https://fdcb5563.ngrok.io';
   token ='Basic YWRtaW46YWRtaW4xMjM0';
 
   constructor(private http: HttpClient) { }
