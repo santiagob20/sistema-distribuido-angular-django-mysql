@@ -1,0 +1,16 @@
+button{
+    background-color: #f59b2e;  
+  }
+
+  h1,h2,h3,h4,h5,h6,p,span{
+    color: #395469;
+    font-family: 'Montserrat', sans-serif;
+  }
+  a{
+    color: #f59b2e!important;
+    cursor: pointer!important;
+    font-family: 'Montserrat', sans-serif;
+  }
+  a:hover{
+    color:#395469;
+  }

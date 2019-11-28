@@ -1,0 +1,41 @@
+<app-navigation></app-navigation>
+<div class="container p-4">
+    <div class="row">
+
+        <div class="col col-md-4 col-lg-4"></div>
+        <div class="col col-md-4 col-lg-4">
+            <form>
+                <div class="form-group">
+                    <label name="nombreInput">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Juan Perez"
+                        [(ngModel)]="persona.nombre">
+                </div>
+                <div class="form-group">
+                    <label name="cedulaInput">Cédula</label>
+                    <input type="text" class="form-control" name="cedula" placeholder="56823232"
+                        [(ngModel)]="persona.cedula">
+                </div>
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="text" class="form-control" placeholder="56823232" [(ngModel)]="persona.telefono"
+                        name="telefono">
+                </div>
+                <div class="form-group">
+                    <label >Dirección</label>
+                    <input type="text" class="form-control" placeholder="calle 123" [(ngModel)]="persona.direccion"
+                        name="direccion">
+                </div>
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input type="text" class="form-control" placeholder="miUsuer" name="usuario" [(ngModel)]="persona.usuario">
+                </div>
+                <div class="form-group">
+                    <label >Clave</label>
+                    <input type="password" class="form-control" name="clave" placeholder="escriba su clave"
+                        [(ngModel)]="persona.clave">
+                </div>
+                <button type="submit" class="btn btn-warning btn-block" (click)="GuardarNuevaPersona()">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

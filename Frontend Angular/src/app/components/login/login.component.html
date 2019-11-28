@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div class="col-md-4 offset-md-4">
+        <div class="content">
+            <div align="center">
+                <h3>Bienvenido al Banco Nacional</h3>
+                <img src="../../../assets/img/banco-logo.png" alt="Banco Nacional" style="width: 120px;">
+            </div>
+            <form>
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input type="text" class="form-control" name="usuario" placeholder="jperezm"
+                        [(ngModel)]="user.usuario">
+                </div>
+                <div class="form-group">
+                    <label>Clave</label>
+                    <input type="password" class="form-control" name="clave" placeholder="escriba su clave" [(ngModel)]="user.clave">
+                </div>
+                <button type="submit" class="btn btn-warning btn-block" (click)="authUser()">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+</div>

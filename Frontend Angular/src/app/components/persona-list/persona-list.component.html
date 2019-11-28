@@ -1,0 +1,33 @@
+<app-navigation></app-navigation>
+<div class="container p-4">
+    <h1>Usuarios</h1>
+    <a routerLink="add" class="btn btn-warning active" role="button" aria-pressed="true" style="color: #395469!important">Nuevo</a>
+    <i class="fas fa-camera"></i>
+    <span class="fas fa-camera"></span>
+    <div class="container"></div>
+    <br>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Cédula</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let persona of personas">
+                    <th>{{persona.id_persona}}</th>
+                    <td>{{persona.nombre}}</td>
+                    <td>{{persona.cedula}}</td>
+                    <td>{{persona.direccion}}</td>
+                    <td>{{persona.telefono}}</td>
+                    <td>{{persona.usuario}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
