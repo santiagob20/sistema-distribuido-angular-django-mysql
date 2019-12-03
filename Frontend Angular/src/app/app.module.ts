@@ -15,6 +15,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductoListComponent } from './components/producto-list/producto-list.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { ProductoListComponent } from './components/producto-list/producto-list.
     HttpClientModule,
     FormsModule,
     GoogleChartsModule.forRoot(),
+    NgbModule
   ],
   providers: [
     PersonasService

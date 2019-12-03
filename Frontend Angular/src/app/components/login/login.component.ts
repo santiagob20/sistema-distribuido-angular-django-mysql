@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem("userdata", JSON.stringify(context.dataResponse.data_user))
             localStorage.setItem("session", this.makeRandom())
             // alert("User logged in")
-            this.router.navigate(['/home'])
+            this.router.navigate(['/home']);
           } else {
             alert("El usuario o clave son incorrectos")
             // alert("Oopss, algo ha salido mal, intenta mas tarde111")
@@ -55,7 +55,6 @@ export class LoginComponent implements OnInit {
         },
         err => alert("Oopss, algo ha salido mal, intenta mas tarde" + err)
       )
-
     }
     console.log(context.dataResponse)
   }

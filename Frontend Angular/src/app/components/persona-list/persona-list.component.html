@@ -1,7 +1,8 @@
 <app-navigation></app-navigation>
 <div class="container p-4">
     <h1>Usuarios</h1>
-    <a routerLink="add" class="btn btn-warning active" role="button" aria-pressed="true" style="color: #395469!important">Nuevo</a>
+    <a routerLink="add" class="btn btn-warning active" role="button"
+        aria-pressed="true" style="color: #395469!important">Nuevo</a>
     <i class="fas fa-camera"></i>
     <span class="fas fa-camera"></span>
     <div class="container"></div>
@@ -16,6 +17,7 @@
                     <th scope="col">Dirección</th>
                     <th scope="col">Teléfono</th>
                     <th scope="col">Usuario</th>
+                    <th scope="col">Ver productos</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,8 +28,43 @@
                     <td>{{persona.direccion}}</td>
                     <td>{{persona.telefono}}</td>
                     <td>{{persona.usuario}}</td>
+                    <td><button type="button" class="btn btn-primary" (click)="cargarModalFiltro(persona.id_persona); open(content)">Ver productos</button></td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Productos cliente #</h4>
+        <button type="button" class="close" aria-label="Close"
+            (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let allProductosPorPersona of allProductosPorPersonaModal">
+                            <th>{{allProductosPorPersona.idPersonaProducto}}</th>
+                            <td>{{allProductosPorPersona.descripcionProducto}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark"
+            (click)="modal.close('Save click')">Cerrar</button>
+    </div>
+</ng-template>
